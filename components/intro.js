@@ -2,7 +2,7 @@ import { CMS_NAME, CMS_URL } from '../lib/constants'
 
 export default function Intro() {
   return (
-    <section className="flex flex-row items-center mt-16 mb-16 md:mb-12">
+    <section className="flex flex-row items-center mt-16 mb-16 md:mb-12 gap-x-8">
         <img
           src="https://res.cloudinary.com/thasup/image/upload/v1694936600/portfolio/godOfCat_irilft.png"
           alt="Catnip Blog Image"
