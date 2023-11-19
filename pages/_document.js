@@ -1,11 +1,14 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
+  const isClient = typeof window !== 'undefined';
+
   return (
     <Html lang="en">
       <Head />
       {/* Google tag (gtag.js) */}
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-LV89KM89EE"></script>
+      {isClient && (
       <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments)}
@@ -13,6 +16,7 @@ export default function Document() {
 
         gtag('config', 'G-LV89KM89EE');
       </script>
+      )}
       <body>
         <Main />
         <NextScript />
