@@ -4,20 +4,25 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "setup": "node ./contentful/setup.js"
+    "setup": "node ./contentful/setup.js",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.4.0",
     "classnames": "2.3.1",
     "date-fns": "2.28.0",
-    "next": "latest",
+    "next": "15.5.29",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@opennextjs/cloudflare": "^1.20.17",
     "autoprefixer": "10.4.2",
     "contentful-import": "^7.8.7",
     "postcss": "8.4.5",
-    "tailwindcss": "^3.0.15"
+    "tailwindcss": "^3.0.15",
+    "wrangler": "^4.161.0"
   }
 }
